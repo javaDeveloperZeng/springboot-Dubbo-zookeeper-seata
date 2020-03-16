@@ -1,0 +1,31 @@
+server:
+  port: 8090
+spring:
+  profiles:
+    active: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://118.190.39.109:3306/test?serverTimezone=UTC
+    username: root
+    password: root
+  dubbo:
+    application:
+      name: springboot-dubbo-demo #应用名
+    registry:
+      address: zookeeper://118.190.39.109 #zookeeper地址
+      port: 2181 #提供注册的端口
+    protocol:
+      name: dubbo
+      port: 21889 #dubbo服务暴露的端口
+    scan: com.bussines.service.impl #扫描的包名
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+      mapper : debug
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.bussines.po
+

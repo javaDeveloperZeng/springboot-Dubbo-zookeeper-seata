@@ -1,0 +1,11 @@
+server:
+  port: 8091
+spring:
+  dubbo:
+    application:
+      name: springboot-dubbo-consumer #应用名
+    registry:
+      address: zookeeper://118.190.39.109 #zookeeper地址
+      port: 2181 #提供注册的端口
+    scan: com.bussines #扫描的包名
+
