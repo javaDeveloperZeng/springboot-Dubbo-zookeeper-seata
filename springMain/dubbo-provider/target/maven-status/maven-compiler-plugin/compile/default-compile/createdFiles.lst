@@ -1,3 +1,4 @@
+com\bussines\service\impl\AccountInfoServiceImpl.class
 com\bussines\SpringBootProviderApplication.class
 com\bussines\configure\ConfigureBean.class
 com\bussines\service\impl\UserService.class

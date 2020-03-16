@@ -7,11 +7,13 @@ package com.bussines.controller;/**
  */
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.bussines.service.AccountInfoBank1Service;
 import com.bussines.service.IUserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +27,15 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     @Reference
     private IUserService userService;
+    @Autowired
+    @Qualifier("accountInfoServiceImplBank1")
+    private AccountInfoBank1Service accountInfoService;
 
+    @RequestMapping("test")
+    public String test( Double amount ){
+        accountInfoService.updateAccountBalance("1",amount);
+        return "test OK";
+    }
     @RequestMapping("getUser/{id}")
     public String GetUser(@PathVariable int id) {
         System.out.println(id);

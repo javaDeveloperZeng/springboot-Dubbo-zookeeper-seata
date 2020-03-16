@@ -1,4 +1,5 @@
 com\bussines\utils\SpringUtil.class
+com\bussines\service\impl\AccountInfoServiceImplBank1.class
 com\bussines\controller\HelloWordController.class
 com\bussines\controller\RouterController.class
 com\bussines\shiro\UserRealm.class

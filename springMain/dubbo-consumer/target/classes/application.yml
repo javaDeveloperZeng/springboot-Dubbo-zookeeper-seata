@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: 8099
 dubbo:
   application:
     name: dubbo-provider #应用名
