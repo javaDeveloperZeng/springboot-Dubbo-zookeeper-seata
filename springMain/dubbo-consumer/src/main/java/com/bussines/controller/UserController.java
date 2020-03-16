@@ -11,6 +11,7 @@ import com.bussines.service.IUserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,10 +22,8 @@ import org.springframework.web.bind.annotation.*;
  *@Date 2019/8/5 11:55
  **/
 @RestController
-@RequestMapping("/testBoot")
 public class UserController {
-
-    @Reference(version = "1.0.0")
+    @Reference
     private IUserService userService;
 
     @RequestMapping("getUser/{id}")

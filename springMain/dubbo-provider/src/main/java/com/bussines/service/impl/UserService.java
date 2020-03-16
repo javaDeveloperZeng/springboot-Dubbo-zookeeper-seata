@@ -19,8 +19,8 @@ import org.springframework.stereotype.Component;
  *@Date 2019/8/5 11:55
  **/
 
-@Service(version = "1.0.0")
-@Component
+@Service
+@org.springframework.stereotype.Service
 public class UserService implements IUserService {
     @Autowired
     UserMapper userMapper;

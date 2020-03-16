@@ -1,0 +1,26 @@
+server:
+  port: 8090
+dubbo:
+  application:
+    name: dubbo-provider #应用名
+  registry:
+    address: zookeeper://118.190.39.109 #zookeeper地址
+    port: 2181 #提供注册的端口
+  protocol:
+    name: dubbo
+    port: 21889 #dubbo服务暴露的端口
+  scan:
+    base-packages: com.bussines.service.impl
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://118.190.39.109:3306/bank2?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
+    username: root
+    password: root
+#showSql
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.bussines.po
+logging:
+  level:
+    root: debug

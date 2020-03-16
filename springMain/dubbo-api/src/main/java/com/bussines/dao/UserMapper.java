@@ -7,6 +7,8 @@ package com.bussines.dao;/**
  */
 
 import com.bussines.po.User;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 /**
