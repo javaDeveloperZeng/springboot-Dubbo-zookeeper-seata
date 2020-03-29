@@ -8,6 +8,7 @@ package com.bussines; /**
 
 import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
 import com.bussines.configure.ConfigureBean;
+import net.unicon.cas.client.configuration.EnableCasClient;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,6 +24,7 @@ import org.springframework.context.annotation.Import;
 @MapperScan("com.bussines.dao")
 @Import(ConfigureBean.class)
 @EnableDubbo
+@EnableCasClient
 public class SpringBootProviderApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootProviderApplication.class,args);

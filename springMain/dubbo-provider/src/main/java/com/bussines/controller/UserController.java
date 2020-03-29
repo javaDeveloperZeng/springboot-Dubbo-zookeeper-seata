@@ -28,4 +28,8 @@ public class UserController {
         System.out.println(id);
         return userService.Sel(id).toString();
     }
+    @RequestMapping("login")
+    public String login(){
+        return "login sussess 8090";
+    }
 }

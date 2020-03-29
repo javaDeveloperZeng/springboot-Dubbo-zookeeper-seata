@@ -24,10 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class MainController {
 
-    @RequestMapping("login")
-    public String login(){
-        return "login";
-    }
+
 
     @RequestMapping("index")
     public String index(){
