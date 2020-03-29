@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02ba1be0-ff3c-42e7-a5b5-742f6028c228" name="Default Changelist" comment="" />
-    <list id="f8ac7543-d48c-46f2-8a9e-bcf9b275dc6b" name="uncommit" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="02ba1be0-ff3c-42e7-a5b5-742f6028c228" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/dubbo-consumer/src/main/java/com/bussines/configuration/CASAutoConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo-provider/src/main/java/com/bussines/configure/CASAutoConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo-provider/src/main/java/com/bussines/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springMain.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-consumer/src/main/java/com/bussines/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-consumer/src/main/java/com/bussines/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-consumer/src/main/java/com/bussines/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-consumer/src/main/java/com/bussines/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-consumer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-consumer/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-provider/src/main/java/com/bussines/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-provider/src/main/java/com/bussines/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-provider/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-provider/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
+    <list id="f8ac7543-d48c-46f2-8a9e-bcf9b275dc6b" name="uncommit" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,22 +69,23 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\worspaceIdea\springMain\dubbo-consumer\src\main\resources\templates\views\view\other" />
+      <recent name="E:\worspaceIdea\springMain\dubbo-consumer\src\main\resources\templates\views\view" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bussines.configuration" />
+      <recent name="com.bussines.service.impl" />
+      <recent name="com.bussiness.service.po" />
+      <recent name="com.bussiness.service.dao" />
+      <recent name="com.bussines" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\worspaceIdea\springMain\dubbo-provider\src\main\java\com\bussines\service\impl" />
       <recent name="E:\worspaceIdea\springMain\dubbo-api\src\main\java\com\bussines\dao" />
       <recent name="E:\worspaceIdea\springMain\dubbo-consumer\src\main\java\com\bussines\service\impl" />
       <recent name="E:\worspaceIdea\springMain\dubbo-api\src\main\java\com\bussines\service" />
       <recent name="E:\worspaceIdea\springMain\dubbo-provider\src\main\java\com\bussines\controller" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.bussines.service.impl" />
-      <recent name="com.bussiness.service.po" />
-      <recent name="com.bussiness.service.dao" />
-      <recent name="com.bussines" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\worspaceIdea\springMain\dubbo-consumer\src\main\resources\templates\views\view\other" />
-      <recent name="E:\worspaceIdea\springMain\dubbo-consumer\src\main\resources\templates\views\view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -220,7 +227,7 @@
       <workItem from="1583985899142" duration="2712000" />
       <workItem from="1584004350012" duration="1428000" />
       <workItem from="1584332418540" duration="21688000" />
-      <workItem from="1585466230322" duration="6514000" />
+      <workItem from="1585466230322" duration="9654000" />
     </task>
     <task id="LOCAL-00001" summary="1.seata和cas服务部署到阿里云2融合cas单点登录">
       <created>1585473572159</created>
@@ -256,13 +263,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-consumer/src/main/java/com/bussines/controller/MainController.java</url>
-          <line>53</line>
+          <line>63</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-consumer/src/main/java/com/bussines/shiro/UserRealm.java</url>
           <line>33</line>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-consumer/src/main/java/com/bussines/controller/MainController.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/dubbo-provider/src/main/java/com/bussines/service/impl/UserService.java</url>

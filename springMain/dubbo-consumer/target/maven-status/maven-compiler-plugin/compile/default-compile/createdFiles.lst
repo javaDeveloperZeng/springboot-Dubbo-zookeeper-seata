@@ -7,4 +7,5 @@ com\bussines\controller\MainController.class
 com\bussines\configuration\SpringBeanConfiguration.class
 com\bussines\shiro\ShiroConfig.class
 com\bussines\controller\UserController.class
+com\bussines\configuration\CASAutoConfig.class
 com\bussines\SpringBootConsumerApplication.class

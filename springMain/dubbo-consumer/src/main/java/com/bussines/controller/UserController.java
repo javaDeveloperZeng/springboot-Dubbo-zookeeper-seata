@@ -14,8 +14,11 @@ import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpSession;
 
 
 /**
@@ -36,6 +39,11 @@ public class UserController {
         return "login success 8092";
     }
 
+
+    @RequestMapping("logout/success")
+    public String logout(){
+        return "logout-success";
+    }
     @RequestMapping("test")
     public String test( Double amount ){
         accountInfoService.updateAccountBalance("1",amount);
