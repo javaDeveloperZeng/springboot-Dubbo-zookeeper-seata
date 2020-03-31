@@ -1,2 +1,8 @@
 com\bussines\configure\CASAutoConfig.class
 com\bussines\controller\MainController.class
+com\bussines\service\CustomUserDetailsService.class
+com\bussines\configure\ConfigureBean.class
+com\bussines\service\impl\UserService.class
+com\bussines\service\impl\AccountInfoServiceImpl.class
+com\bussines\SpringBootProviderApplication.class
+com\bussines\controller\UserController.class

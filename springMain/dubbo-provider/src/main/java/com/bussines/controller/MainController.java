@@ -17,4 +17,20 @@ public class MainController {
         //使用cas退出成功后,跳转到http://cas.client1.com:9002/logout/success
         return "redirect:" + clientLogoutUrl;
     }
+    @RequestMapping("home")
+    public String home(){
+        return "home";
+    }
+    @RequestMapping("/")
+    public String page(){
+        return "home";
+    }
+    @RequestMapping("/login")
+    public String login(){
+        return "login";
+    }
+    @RequestMapping("/hello")
+    public String hello(){
+        return "hello";
+    }
 }

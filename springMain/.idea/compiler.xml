@@ -8,9 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="dubbo-api" />
         <module name="dubboprovider" />
-        <module name="dubboconsumer" />
         <module name="dubbo-consumer" />
         <module name="dubbo-provider" />
+        <module name="dubboconsumer" />
         <module name="dubboapi" />
       </profile>
     </annotationProcessing>

@@ -1,5 +1,9 @@
 package com.bussines.po;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 /**
@@ -9,6 +13,9 @@ import java.io.Serializable;
  * @author ZLS
  * @date 2019/8/511:54
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User implements Serializable {
     private Integer id;
     private String userName;
@@ -16,63 +23,8 @@ public class User implements Serializable {
     private String realName;
     private String locked;
     private String credentialsSalt;
+    private String type;
 
-    public String getCredentialsSalt() {
-        return credentialsSalt;
-    }
 
-    public void setCredentialsSalt(String credentialsSalt) {
-        this.credentialsSalt = credentialsSalt;
-    }
-
-    public String getLocked() {
-        return locked;
-    }
-
-    public void setLocked(String locked) {
-        this.locked = locked;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassWord() {
-        return passWord;
-    }
-
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
-    }
-
-    public String getRealName() {
-        return realName;
-    }
-
-    public void setRealName(String realName) {
-        this.realName = realName;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", userName='" + userName + '\'' +
-                ", passWord='" + passWord + '\'' +
-                ", realName='" + realName + '\'' +
-                '}';
-    }
 }
 

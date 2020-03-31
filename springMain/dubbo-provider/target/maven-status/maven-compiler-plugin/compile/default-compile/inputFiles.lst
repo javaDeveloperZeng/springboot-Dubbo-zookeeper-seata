@@ -3,3 +3,5 @@ H:\gitCommit\springMain\dubbo-provider\src\main\java\com\bussines\service\impl\U
 H:\gitCommit\springMain\dubbo-provider\src\main\java\com\bussines\configure\ConfigureBean.java
 H:\gitCommit\springMain\dubbo-provider\src\main\java\com\bussines\service\impl\AccountInfoServiceImpl.java
 H:\gitCommit\springMain\dubbo-provider\src\main\java\com\bussines\SpringBootProviderApplication.java
+H:\gitCommit\springMain\dubbo-provider\src\main\java\com\bussines\configure\CASAutoConfig.java
+H:\gitCommit\springMain\dubbo-provider\src\main\java\com\bussines\controller\MainController.java

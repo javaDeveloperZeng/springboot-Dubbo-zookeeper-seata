@@ -6,15 +6,11 @@ package com.bussines.controller;/**
  * @date 2020/3/1612:29
  */
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.bussines.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.servlet.http.HttpSession;
 
 /**
  *@Description TODO
@@ -31,10 +27,10 @@ public class UserController {
         System.out.println(id);
         return userService.Sel(id).toString();
     }
-    @RequestMapping("login")
+   /* @RequestMapping("login")
     public String login(){
         return "login sussess 8090";
-    }
+    }*/
 
 
     @RequestMapping("logout/success")
