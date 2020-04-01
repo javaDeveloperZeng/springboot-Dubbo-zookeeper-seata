@@ -7,7 +7,6 @@ package com.bussines; /**
  */
 
 import com.bussines.configuration.SpringBeanConfiguration;
-import net.unicon.cas.client.configuration.EnableCasClient;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,7 +22,7 @@ import org.springframework.context.annotation.Import;
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
 @MapperScan("com.bussines.dao")
 @Import(SpringBeanConfiguration.class)
-@EnableCasClient
+/*@EnableCasClient*/
 public class SpringBootConsumerApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootConsumerApplication.class,args);
