@@ -120,6 +120,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .addFilterBefore(requestCasGlobalLogoutFilter(), LogoutFilter.class);
         http.csrf().disable();
         http.headers().frameOptions().disable();
+
+        http.authorizeRequests().antMatchers("/home","/about").permitAll();
         http.authorizeRequests().antMatchers("/assets/**").permitAll().anyRequest().authenticated();
         http.logout().logoutUrl("/logout").logoutSuccessUrl("/").invalidateHttpSession(true).deleteCookies("JSESSIONID");
     }

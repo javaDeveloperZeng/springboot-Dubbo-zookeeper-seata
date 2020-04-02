@@ -72,7 +72,7 @@ public class CASAutoConfig {
 
             registration.setInitParameters(initParameters);
             // 设定加载的顺序
-            registration.setOrder(2);
+            registration.setOrder(0);
             return registration;
         }
 
