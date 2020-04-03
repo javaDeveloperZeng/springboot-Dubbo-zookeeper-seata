@@ -23,7 +23,6 @@ import org.springframework.context.annotation.Import;
 @MapperScan("com.bussines.dao")
 @Import(ConfigureBean.class)
 @EnableDubbo
-/*@EnableCasClient*/
 public class SpringBootProviderApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootProviderApplication.class,args);

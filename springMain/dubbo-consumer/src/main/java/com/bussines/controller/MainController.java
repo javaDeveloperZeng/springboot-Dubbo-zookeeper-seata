@@ -9,15 +9,11 @@ package com.bussines.controller;/**
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.servlet.http.HttpSession;
 
 /**
  *@Description TODO
@@ -26,7 +22,7 @@ import javax.servlet.http.HttpSession;
  **/
 @Controller
 public class MainController {
-    @Value("${casClientLogoutUrl}")
+   /* @Value("${casClientLogoutUrl}")
     private String clientLogoutUrl;//http://cas.server.com:8443/cas/logout?service=http://cas.client1.com:9002/logout/success
 
     @RequestMapping("logout")
@@ -34,6 +30,22 @@ public class MainController {
         session.invalidate();//销毁session
         //使用cas退出成功后,跳转到http://cas.client1.com:9002/logout/success
         return "redirect:" + clientLogoutUrl;
+    }*/
+   @RequestMapping("home")
+   public String home(){
+       return "home";
+   }
+    @RequestMapping("/")
+    public String page(){
+        return "home";
+    }
+    @RequestMapping("/login")
+    public String login(){
+        return "login";
+    }
+    @RequestMapping("/hello")
+    public String hello(){
+        return "hello";
     }
 
     @RequestMapping("index")

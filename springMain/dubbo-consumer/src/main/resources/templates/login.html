@@ -1,31 +1,17 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-<meta charset="UTF-8">
-    <title>登录页面</title>
+    <meta charset="UTF-8" />
+    <title>login</title>
 </head>
-<link th:href="@{/webjars/bootstrap/3.4.1/css/bootstrap.css}"/>
-<script th:src="@{/webjars/bootstrap/3.4.1/js/bootstrap.js}"></script>
-<script th:src="@{/webjars/jquery/1.9.0/jquery.js}"></script>
 <body>
-登录名1：<input name="userName" id="userName" value="" type="text">
-密码2：<input name="passWord" id="passWord" type="password">
-<button class="btn-success" onclick="login();">登录</button>
+<div th:if="${param.error}">无效用户名和密码</div>
+<div th:if="${param.logout}">已登出</div>
+<form th:action="@{/login}" method="post">
+    <div><label for="username">User Name: <input type="text" name="username" /></label></div>
+    <div><label for="password">password: <input type="password" name="password" /></label></div>
+    <div><input type="submit" value="Sign In"/></div>
+</form>
 </body>
-<script>
-
-    function login() {
-       var passWord= $("#passWord").val();
-       var userName= $("#userName").val();
-        $.ajax({
-            type : "POST",
-            url:"/doLogin",
-            data:{"passWord":passWord,"userName":userName},
-            dataType : "json",
-            success : function(data) {
-
-            }
-        });
-    }
-</script>
 </html>
