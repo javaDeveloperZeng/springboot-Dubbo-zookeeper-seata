@@ -3,6 +3,8 @@ package com.bussines.configuration;
 import com.bussines.service.CustomUserDetailsService;
 import org.jasig.cas.client.session.SingleSignOutFilter;
 import org.jasig.cas.client.validation.Cas20ServiceTicketValidator;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
@@ -18,6 +20,8 @@ import org.springframework.security.web.authentication.logout.SecurityContextLog
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 
 @Configuration
 @EnableWebSecurity
@@ -29,7 +33,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private static final String CAS_URL_PREFIX = "cas.url.prefix";
     private static final String CAS_SERVICE_URL = "app.service.security";
     private static final String APP_SERVICE_HOME = "app.service.home";
-
+    @Value("${cas.url.prefix}")
+    private String CAS_URL_PREFIX_VALUE;
     @Resource
     private Environment env;
 
@@ -75,11 +80,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public SingleSignOutFilter singleSignOutFilter() {
-        SingleSignOutFilter singleSignOutFilter = new SingleSignOutFilter();
-        singleSignOutFilter.setCasServerUrlPrefix(env.getRequiredProperty(CAS_URL_PREFIX));
-        return singleSignOutFilter;
+    public FilterRegistrationBean filterSingleRegistration() {
+        final FilterRegistrationBean registration = new FilterRegistrationBean();
+        registration.setFilter(new SingleSignOutFilter());
+        // 设定匹配的路径
+        registration.addUrlPatterns("/*");
+        Map<String,String> initParameters = new HashMap<String, String>();
+        initParameters.put("casServerUrlPrefix", CAS_URL_PREFIX_VALUE);
+        registration.setInitParameters(initParameters);
+        // 设定加载的顺序
+        registration.setOrder(1);
+        return registration;
     }
+
 
     @Bean
     public LogoutFilter requestCasGlobalLogoutFilter() {
@@ -114,10 +127,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout().permitAll();*/
         http.addFilter(casAuthenticationFilter());
         http.exceptionHandling().authenticationEntryPoint(casAuthenticationEntryPoint());
-        http.addFilterBefore(
-                singleSignOutFilter(),
-                CasAuthenticationFilter.class)
-                .addFilterBefore(requestCasGlobalLogoutFilter(), LogoutFilter.class);
+        http.addFilterBefore(requestCasGlobalLogoutFilter(), LogoutFilter.class);
         http.csrf().disable();
         http.headers().frameOptions().disable();
 
