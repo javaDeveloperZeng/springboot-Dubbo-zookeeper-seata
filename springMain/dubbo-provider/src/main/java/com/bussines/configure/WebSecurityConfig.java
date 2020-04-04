@@ -83,7 +83,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public LogoutFilter requestCasGlobalLogoutFilter() {
-        LogoutFilter logoutFilter = new LogoutFilter(env.getRequiredProperty(CAS_URL_LOGOUT) + "?service="+ env.getRequiredProperty(APP_SERVICE_HOME), new SecurityContextLogoutHandler());
+        LogoutFilter logoutFilter = new LogoutFilter(env.getRequiredProperty(CAS_URL_LOGOUT), new SecurityContextLogoutHandler());
         logoutFilter.setLogoutRequestMatcher(new AntPathRequestMatcher("/logout", "POST"));
         return logoutFilter;
     }
