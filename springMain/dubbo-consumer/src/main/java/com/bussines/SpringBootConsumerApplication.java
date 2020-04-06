@@ -8,6 +8,7 @@ package com.bussines; /**
 
 import com.bussines.configuration.SpringBeanConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -23,6 +24,7 @@ import org.springframework.context.annotation.Import;
 @MapperScan("com.bussines.dao")
 @Import(SpringBeanConfiguration.class)
 /*@EnableCasClient*/
+@EnableRabbit
 public class SpringBootConsumerApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootConsumerApplication.class,args);

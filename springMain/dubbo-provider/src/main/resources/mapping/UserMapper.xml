@@ -7,6 +7,7 @@
         <result column="userName" jdbcType="VARCHAR" property="userName" />
         <result column="passWord" jdbcType="VARCHAR" property="passWord" />
         <result column="realName" jdbcType="VARCHAR" property="realName" />
+        <result column="type" jdbcType="VARCHAR" property="type" />
     </resultMap>
 
     <select id="Sel" resultType="com.bussines.po.User">

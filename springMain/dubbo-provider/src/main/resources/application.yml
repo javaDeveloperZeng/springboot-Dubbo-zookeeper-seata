@@ -17,7 +17,10 @@ spring:
     url: jdbc:mysql://118.190.39.109:3306/bank2?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
     username: root
     password: root
-#showSql
+
+  http:
+    encoding:
+      charset: UTF-8
 mybatis:
   mapper-locations: classpath:mapping/*Mapper.xml
   type-aliases-package: com.bussines.po
