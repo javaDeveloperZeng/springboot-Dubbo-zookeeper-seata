@@ -30,6 +30,8 @@ public class TestController {
         amqpAdmin.declareQueue(testDirectQueue);
         Binding binding = new Binding("TestDirectQueue", Binding.DestinationType.QUEUE, "directExchange","routingKey", null);
         amqpAdmin.declareBinding(binding);
+
+        Exchange exchange2=new FanoutExchange("directExchange");
     }
 
     @Test
