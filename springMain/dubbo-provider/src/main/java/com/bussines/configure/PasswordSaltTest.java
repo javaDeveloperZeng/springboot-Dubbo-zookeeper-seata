@@ -10,7 +10,7 @@ public class PasswordSaltTest {
     private String staticSalt = ".";
     private String algorithmName = "MD5";
     private String encodedPassword = "123456";
-    private String dynaSalt = "root1";
+    private String dynaSalt = "admin";
 
     @Test
     public void test() throws Exception {
